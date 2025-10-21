@@ -15,6 +15,7 @@ To replicate our experimental results, follow these steps to set up your project
 ```bash
 uv venv .venv
 uv sync
+uv run install pre-commit
 ```
 
 These commands will install the necessary dependencies, including the trunctaylor package, ensuring that all computational experiments run seamlessly.
