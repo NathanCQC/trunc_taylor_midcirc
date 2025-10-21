@@ -32,7 +32,7 @@ For a detailed demonstration of the projector in action—specifically within th
 If you find this work helpful in your research, please consider citing our paper:
 
     @article{trunctaylor2023,
-      title={Efficient Ground State Projection using the Wall Chebyshev Method},
+      title={Truncated Taylor Series using Mid-Circuit Measurements in guppy},
       author={Your Name and Collaborators},
       journal={Journal of Computational Methods},
       year={2023},
