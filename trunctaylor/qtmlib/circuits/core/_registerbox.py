@@ -3,7 +3,10 @@
 from __future__ import annotations
 from pytket.circuit import QubitRegister, Qubit, UnitID
 from pytket._tket.circuit import CircBox, Circuit
-from trunctaylor.qtmlib.measurement.utils import unitary_postselect, statevector_postselect
+from trunctaylor.qtmlib.measurement.utils import (
+    unitary_postselect,
+    statevector_postselect,
+)
 from numpy.typing import NDArray
 import numpy as np
 from copy import copy
@@ -186,7 +189,7 @@ class RegisterBox:
 
     def initialise_circuit(self) -> RegisterCircuit:
         """Initialise a circuit with the qubit registers used in the RegisterBox."""
-        from qtmlib.circuits.core import RegisterCircuit
+        from trunctaylor.qtmlib.circuits.core import RegisterCircuit
 
         qreg_circ = RegisterCircuit()
         for qreg in self.q_registers:
@@ -223,7 +226,7 @@ class RegisterBox:
                 defaults to 1.
 
         """
-        from qtmlib.circuits.core import PytketQControlRegisterBox
+        from trunctaylor.qtmlib.circuits.core import PytketQControlRegisterBox
 
         return PytketQControlRegisterBox(
             self, n_control, control_qreg_str, control_index
@@ -358,8 +361,8 @@ class RegisterBox:
             RegisterBox: The RegisterBox.
 
         """
-        from qtmlib.circuits.core import RegisterCircuit
-        from qtmlib.circuits.core import make_qreg_dataclass
+        from trunctaylor.qtmlib.circuits.core import RegisterCircuit
+        from trunctaylor.qtmlib.circuits.core import make_qreg_dataclass
 
         circ = RegisterCircuit(circbox.n_qubits)
         circ.append(circbox.get_circuit().copy())
@@ -402,8 +405,8 @@ class RegisterBox:
         circ: Circuit,
         qreg_attrs: dict[str, QubitRegister] | None = None,
     ) -> RegisterBox:
-        from qtmlib.circuits.core import make_qreg_dataclass
-        from qtmlib.circuits.core import RegisterCircuit
+        from trunctaylor.qtmlib.circuits.core import make_qreg_dataclass
+        from trunctaylor.qtmlib.circuits.core import RegisterCircuit
 
         """Initialise a RegisterBox from a Circuit Input.
 

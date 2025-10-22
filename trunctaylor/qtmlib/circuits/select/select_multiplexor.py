@@ -130,7 +130,7 @@ class QControlSelectMultiplexorBox(QControlRegisterBox):
         control_index: int | None = None,
     ):
         """Initialise the QControlSelectMultiplexorBox."""
-        from qtmlib.circuits.utils import int_to_bits
+        from trunctaylor.qtmlib.circuits.utils import int_to_bits
 
         circ = select_box.initialise_circuit()
         circ.name = f"Q{n_control}C{select_box.__class__.__name__}"

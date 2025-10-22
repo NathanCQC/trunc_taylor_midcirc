@@ -63,7 +63,7 @@ class QControlRegisterBox(RegisterBox):
         for q_reg in circ.q_registers:
             control_circ.add_q_register(q_reg)
 
-        from qtmlib.circuits.utils import int_to_bits
+        from trunctaylor.qtmlib.circuits.utils import int_to_bits
 
         control_bits = int_to_bits(cast(int, control_index), n_control)
 
